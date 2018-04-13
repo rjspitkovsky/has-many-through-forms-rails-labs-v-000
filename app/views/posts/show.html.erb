@@ -3,5 +3,8 @@
 
 <% @post.comments.each do |comment| %>
   <%= comment.content %>
-  <%= link_to comment.user.username, user_path(comment.user) %> 
+  <% end %> 
+  
+  <% @unique_users.each do |user| %>
+  <%= link_to user.username, user_pathuser) %> 
   <% end %>
