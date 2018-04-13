@@ -3,5 +3,5 @@
 
 <% @post.comments.each do |comment| %>
   <%= comment.content %>
-  <%= comment.user %> 
+  <%= link_to comment.user.username, user_path(comment.user) %> 
   <% end %>
