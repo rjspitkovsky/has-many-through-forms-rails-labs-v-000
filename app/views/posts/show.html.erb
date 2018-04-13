@@ -2,7 +2,7 @@
 <%= @post.content %>
 <% @post.categories.each do |category| %>
   <%= category.name %>
-  <% end %> 
+  <% end %>
 
 
 <% @post.comments.each do |comment| %>
@@ -13,15 +13,15 @@
   <%= link_to user.username, user_path(user) %>
   <% end %>
 
-  <%= form_for @comment do |f| %> 
-  <%= f.label "Content" %> 
-  <%= f.text_field :content %> 
-  <%= f.collection_select :user_id, User.all, :id, :username %> 
+  <%= form_for @comment do |f| %>
+  <%= f.label "Content" %>
+  <%= f.text_field :content %>
+  <%= f.collection_select :user_id, User.all, :id, :username %>
 
-  <%= f.fields_for :user, @comment.user do |user_fields| %> 
-  <%= f.label "Username" %> 
-  <%= user_fields.text_field :username %> 
-  <% end %> 
+  <%= f.fields_for :user, @comment.user do |user_fields| %>
+  <%= f.label "Username" %>
+  <%= user_fields.text_field :username %>
+  <% end %>
 
-  <%= f.submit %> 
+  <%= f.submit %>
   <% end %> 
