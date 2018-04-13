@@ -8,6 +8,6 @@ class Comment < ActiveRecord::Base
       user = User.find_or_create_by(user_attribute)
       self.users << user
     end
-  end 
+  end
 
 end
