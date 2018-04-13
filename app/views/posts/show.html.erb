@@ -1,1 +1,9 @@
+<%= @post.title %> 
+<%= @post.content %> 
 
+<% @post.comments.each do |comment| %> 
+  <%= comment.content %> 
+  <%= comment.user %> 
+  <% end %> 
+
+  
