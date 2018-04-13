@@ -2,9 +2,6 @@
   <%= f.label "content" %>
   <%= f.text_area :content %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :name %>
-  <!-- <%= f.fields_for :user, comment.user.build do |user_fields| %>
-      <%= f.label "username" %>
-      <%= user_fields.text_field :username %>
-  <% end %> -->
+
   <%= f.submit %>
 <% end %>
