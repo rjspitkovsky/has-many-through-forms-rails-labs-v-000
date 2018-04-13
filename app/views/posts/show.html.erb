@@ -1,7 +1,7 @@
 <%= @post.title %>
 <%= @post.content %>
 <% @post.categories.each do |category| %>
-  <%= category.name %>
+  <%= category.user.username %> says: <%= comment.content %> 
   <% end %>
 
 
