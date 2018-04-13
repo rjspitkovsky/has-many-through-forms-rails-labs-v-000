@@ -1,10 +1,11 @@
 <%= @post.title %>
 <%= @post.content %>
+<%= @post.categories %> 
 
 <% @post.comments.each do |comment| %>
   <%= comment.content %>
   <% end %>
 
   <% @unique_users.each do |user| %>
-  <%= link_to user.username, user_path(user) %> 
+  <%= link_to user.username, user_path(user) %>
   <% end %>
