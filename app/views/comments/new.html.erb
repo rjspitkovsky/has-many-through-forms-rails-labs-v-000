@@ -1,7 +1,7 @@
 <%= form_for @comment do |f| %>
   <%= f.label "Content" %>
   <%= f.text_area :content %>
-  <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
+  <%= f.collection_check_boxes :user_id, User.all, :id, :name %>
   <!-- <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
       <%= f.label "Category" %>
       <%= categories_fields.text_field :name %>
